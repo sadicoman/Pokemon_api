@@ -1,0 +1,15 @@
+<h2>pokemon-details works!</h2>
+<div>
+  <input
+    type="text"
+    [(ngModel)]="searchQuery"
+    placeholder="Enter Pokemon ID or Name"
+  />
+  <button (click)="searchPokemon()">Search</button>
+</div>
+
+<div *ngIf="pokemon">
+  <h1>{{ pokemon.name }}</h1>
+  <img [src]="pokemon.sprites.front_default" alt="{{ pokemon.name }}" />
+  <!-- Add more details here -->
+</div>
